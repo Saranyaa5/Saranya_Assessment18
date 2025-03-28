@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage extends BasePage {
@@ -29,6 +30,10 @@ public class LoginPage extends BasePage {
     @FindBy(xpath="//h3[@data-test='error']")
     private WebElement error_message ;
     public String geterrorMessage() {
+    	  WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+          
+          wait.until(ExpectedConditions.visibilityOf(error_message));     
+          
         return error_message.getText();
     }
     @FindBy(xpath="//div[@id='inventory_filter_container']//div")
