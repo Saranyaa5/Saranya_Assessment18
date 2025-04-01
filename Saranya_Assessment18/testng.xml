@@ -2,8 +2,8 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-    <class name="com.test.ProductTest"/>
      <class name="com.test.LoginTest"/>
+<class name="com.test.ProductTest"/>
     </classes>
   </test>
 </suite>

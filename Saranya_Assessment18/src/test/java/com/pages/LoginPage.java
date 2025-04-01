@@ -40,7 +40,7 @@ public class LoginPage extends BasePage {
     private WebElement loggedin;
     
     public String getHeading() {
-    	return "login success";
+    	return loggedin.getText();
     }
     
 
